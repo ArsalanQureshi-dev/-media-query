@@ -1,0 +1,119 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+nav {
+    width: 100vw;
+    height: 68px;
+    background-color: blueviolet;
+    position: relative;
+    top: 4px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav .nav-title {
+    padding: 5px 15px;
+    color: white;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+nav .nav-links ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+    position: relative;
+
+}
+
+nav .nav-links li {
+    background: white;
+    padding: 10px;
+    margin-left: 5px;
+    border-radius: 12px;
+}
+
+nav .nav-links li:hover {
+    transform: scale(1.1, 1.1);
+}
+
+nav .nav-links li a {
+    color: blue;
+    text-decoration: none;
+}
+
+#baner img {
+    width: 100vw;
+    height: 50vh;
+}
+
+.parent {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 20px;
+    column-gap: 25px;
+    flex-wrap: wrap;
+}
+
+.child {
+    margin-top: 10px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px black;
+    position: relative;
+}
+
+.child img {
+    width: 23vw;
+    height: 30vh;
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+/* 1025px — 1200px: Desktops, large screens. */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .child {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* 481px — 768px: iPads, Tablets. */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .child {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 320px — 480px: Mobile devices. */
+@media only screen and (max-width: 480px) {
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .child img {
+        width: 23vw;
+        height: 30vh;
+        margin-left: 40%;
+    }
+}
